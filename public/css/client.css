@@ -1,0 +1,15 @@
+.product-list {
+  list-style: none;
+  white-space: nowrap;
+}
+.product-list .thumbnail-row {
+  display: inline-block;
+}
+.product-list .thumbnail-row a {
+  background-size: fit;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inherit;
+  width: 480px;
+  height: 480px;
+}
