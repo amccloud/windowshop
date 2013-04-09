@@ -62,7 +62,7 @@ define(function(require) {
         model: ZapposProduct,
 
         url: function() {
-            return 'http://api.zappos.com/Search?term=' + this.searchQuery;
+            return 'http://api.zappos.com/Search?limit=100&term=' + this.searchQuery;
         },
         sync: function(method, model, options) {
             options.dataType = 'jsonp';
