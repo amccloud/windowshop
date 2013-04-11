@@ -50,19 +50,19 @@ define(function(require) {
             return fullSrc;
         }
     }, {
-        IMAGE_RECIPE_THUMBNAIL: 't-THUMBNAIL.jpg',
-        IMAGE_RECIPE_MULTIVIEW: 'p-MULTIVIEW.jpg',
-        IMAGE_RECIPE_4X: 'p-4x.jpg',
-        IMAGE_RECIPE_THUMBNAIL_LEGACY: 't.jpg',
-        IMAGE_RECIPE_MULTIVIEW_LEGACY: 'p.jpg',
-        IMAGE_RECIPE_4X_LEGACY: 'p.jpg'
+        IMAGE_RECIPE_THUMBNAIL: '-t-THUMBNAIL',
+        IMAGE_RECIPE_MULTIVIEW: '-p-MULTIVIEW',
+        IMAGE_RECIPE_4X: '-p-4x',
+        IMAGE_RECIPE_THUMBNAIL_LEGACY: '-t',
+        IMAGE_RECIPE_MULTIVIEW_LEGACY: '-p',
+        IMAGE_RECIPE_4X_LEGACY: '-p'
     });
 
     return Products.extend({
         model: ZapposProduct,
 
         url: function() {
-            return 'http://api.zappos.com/Search?limit=100&term=' + this.searchQuery;
+            return 'http://api.zappos.com/Search?limit=100&sort={"productPopularity":"asc"}&term=' + this.searchQuery;
         },
         sync: function(method, model, options) {
             options.dataType = 'jsonp';

@@ -1,0 +1,29 @@
+@import "compass/css3";
+@import "compass/reset";
+
+$thumbnal-size: 480px;
+$aisle-count: 21;
+
+#main {
+    @include perspective(1000px);
+    margin: 0px auto;
+    margin-top: 100px;
+    width: $thumbnal-size;
+}
+
+.product-list {
+    @include transform-style(preserve-3d);
+    @include transition(-webkit-transform 0.2s);
+    list-style: none;
+
+    .thumbnail-row {
+        background: #fff;
+        position: absolute;
+        width: $thumbnal-size;
+        height: $thumbnal-size;
+
+        img {
+            width: $thumbnal-size;
+        }
+    }
+}

@@ -17,7 +17,7 @@ define(function(require) {
     });
 
     var searchResults = new Products([], {
-        searchQuery: window.location.search.slice(1) || 'boots'
+        searchQuery: window.location.search.slice(1) || 'vans'
     });
 
     var searchResultsView = new ProductListView({
