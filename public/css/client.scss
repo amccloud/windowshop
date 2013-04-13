@@ -5,7 +5,7 @@ $thumbnal-size: 480px;
 $aisle-count: 21;
 
 #main {
-    @include perspective(1000px);
+    @include perspective(200px);
     margin: 0px auto;
     margin-top: 100px;
     width: $thumbnal-size;
@@ -21,6 +21,7 @@ $aisle-count: 21;
         position: absolute;
         width: $thumbnal-size;
         height: $thumbnal-size;
+        opacity: 0.8;
 
         img {
             width: $thumbnal-size;

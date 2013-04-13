@@ -68,11 +68,11 @@ define(function(require) {
             }
         },
         rotateToIndex: function() {
-            var radius = this._getRadius(),
+            var cameraZ = this._getRadius(),
                 theta = this._getTheta(),
                 rotation = this.index * theta * -1;
 
-            this.$el.css('-webkit-transform', 'translateZ(-' + radius + 'px) rotateY(' + rotation + 'deg)');
+            this.$el.css('-webkit-transform', 'translateZ(-' + cameraZ + 'px) rotateY(' + rotation + 'deg)');
         },
         getCurrentlySelected: function() {
             return this.collection.at(this.index);
